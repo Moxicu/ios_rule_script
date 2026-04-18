@@ -53,5 +53,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: sync upstream and rebuild custom Surge rules"
-            git push
+            git push origin master
           fi
