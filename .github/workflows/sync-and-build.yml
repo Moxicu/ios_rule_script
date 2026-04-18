@@ -3,7 +3,7 @@ name: Sync upstream and build custom rules
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */24 * * *"
+    - cron: "0 */6 * * *"
 
 permissions:
   contents: write
@@ -31,9 +31,9 @@ jobs:
           git remote add upstream https://github.com/blackmatrix7/ios_rule_script.git || true
           git fetch upstream
 
-      - name: Sync from upstream master into local main
+      - name: Sync from upstream master into local master
         run: |
-          git checkout main
+          git checkout master
           git merge upstream/master --no-edit
 
       - name: Build custom rule file
