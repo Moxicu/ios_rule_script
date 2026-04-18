@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   sync-and-build:
     runs-on: ubuntu-latest
@@ -28,10 +31,10 @@ jobs:
           git remote add upstream https://github.com/blackmatrix7/ios_rule_script.git || true
           git fetch upstream
 
-      - name: Sync main from upstream
+      - name: Sync from upstream master into local main
         run: |
           git checkout main
-          git merge upstream/main --no-edit
+          git merge upstream/master --no-edit
 
       - name: Build custom rule file
         run: |
