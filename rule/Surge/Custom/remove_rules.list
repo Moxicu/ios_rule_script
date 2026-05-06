@@ -1,4 +1,5 @@
 DOMAIN-SUFFIX,sciencedirect.com
+DOMAIN-SUFFIX,updf.com
 USER-AGENT,*bili*
 USER-AGENT,Bilibili*
 USER-AGENT,bili*
